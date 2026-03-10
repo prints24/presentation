@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Partnership Proposal | Printers Club & Monotech</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800&family=Source+Sans+Pro:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            navy: '#003366',
+                            gold: '#C5A059',
+                            dark: '#001a33',
+                            light: '#f8fafc'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Source Sans Pro', 'sans-serif'],
+                        display: ['Montserrat', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        html { scroll-behavior: smooth; }
+        .bg-gradient-navy { background: linear-gradient(135deg, #003366 0%, #001a33 100%); }
+        .text-gradient-gold { background: linear-gradient(90deg, #C5A059, #e2c285); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .card-hover:hover { transform: translateY(-10px); transition: all 0.3s ease; box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04); }
+        .section-padding { padding: 100px 0; }
+        
+        /* Animation Classes */
+        .reveal { opacity: 0; transform: translateY(30px); transition: all 0.8s ease-out; }
+        .reveal.active { opacity: 1; transform: translateY(0); }
+
+        /* Floating Nav Styling */
+        .nav-control {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 100;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        .nav-btn {
+            width: 50px;
+            height: 50px;
+            background: rgba(197, 160, 89, 0.9);
+            color: #003366;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            transition: all 0.3s ease;
+            backdrop-filter: blur(5px);
+        }
+        .nav-btn:hover {
+            background: #C5A059;
+            transform: scale(1.1);
+        }
+        .nav-btn:active {
+            transform: scale(0.95);
+        }
+    </style>
+</head>
+<body class="bg-brand-light text-slate-800">
+
+    <!-- One-Click Navigation Controls -->
+    <div class="nav-control">
+        <button onclick="navigate('prev')" class="nav-btn" title="Previous Section">
+            <i class="fas fa-chevron-up"></i>
+        </button>
+        <button onclick="navigate('next')" class="nav-btn" title="Next Section">
+            <i class="fas fa-chevron-down"></i>
+        </button>
+    </div>
+
+    <!-- Section 1: Hero Section -->
+    <header id="section-1" class="min-h-screen bg-gradient-navy flex items-center relative overflow-hidden section-item">
+        <!-- Abstract Decorations -->
+        <div class="absolute top-0 right-0 w-1/3 h-full bg-brand-gold opacity-5 skew-x-12 translate-x-20"></div>
+        <div class="absolute bottom-10 left-10 w-64 h-64 border-2 border-brand-gold opacity-10 rounded-full"></div>
+
+        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center relative z-10">
+            <div class="reveal active">
+                <div class="flex items-center gap-2 mb-8">
+                    <div class="bg-brand-gold p-2 rounded">
+                        <i class="fas fa-print text-brand-navy text-xl"></i>
+                    </div>
+                    <span class="font-display font-extrabold text-white tracking-tight text-xl uppercase">Printers Club of <span class="text-brand-gold">India Limited</span></span>
+                </div>
+                <p class="text-brand-gold font-display font-bold uppercase tracking-[0.3em] mb-4">Strategic Proposal</p>
+                <h1 class="text-white font-display font-extrabold text-5xl md:text-7xl leading-tight mb-6">
+                    Dealership <br><span class="text-gradient-gold">Partnership</span>
+                </h1>
+                <p class="text-slate-300 text-xl max-w-lg mb-8 leading-relaxed">
+                    Connecting Monotech Systems Limited with India's largest network of printing professionals.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <div class="bg-white/10 backdrop-blur-sm border border-white/20 p-4 rounded-lg">
+                        <span class="text-xs text-brand-gold font-bold uppercase block mb-1">Presented To</span>
+                        <p class="text-white font-bold text-sm">Monotech Systems Ltd.</p>
+                        <p class="text-slate-400 text-[10px] uppercase tracking-wider">India Partner of Ricoh</p>
+                    </div>
+                    <div class="bg-white/10 backdrop-blur-sm border border-white/20 p-4 rounded-lg">
+                        <span class="text-xs text-brand-gold font-bold uppercase block mb-1">Presented By</span>
+                        <p class="text-white font-bold text-sm">Printers Club of India Ltd.</p>
+                        <p class="text-slate-400 text-[10px] uppercase tracking-wider">Mr. Aditya Singh, MD</p>
+                    </div>
+                </div>
+            </div>
+            <div class="hidden md:block reveal active">
+                <div class="relative">
+                    <img src="https://images.unsplash.com/photo-1562654501-a0ccc0af3fa1?auto=format&fit=crop&q=80&w=1000" class="rounded-2xl shadow-2xl grayscale hover:grayscale-0 transition-all duration-700 border-4 border-white/10" alt="Printing Tech">
+                    <div class="absolute -bottom-6 -left-6 bg-brand-gold p-8 rounded-lg shadow-xl">
+                        <p class="text-4xl font-display font-extrabold text-brand-navy">#1</p>
+                        <p class="text-xs font-bold text-brand-navy uppercase tracking-tighter">Printing Platform in India</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Section 2: Group Overview -->
+    <section id="section-2" class="section-padding bg-white section-item">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16 reveal">
+                <h2 class="text-brand-navy font-display font-extrabold text-4xl mb-4">India's Largest Ecosystem</h2>
+                <p class="text-slate-500 max-w-2xl mx-auto">Printers Club connects the industry through service, media, and exhibitions, building a unified landscape for printing technology.</p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-brand-light p-8 rounded-2xl border border-slate-100 card-hover reveal">
+                    <div class="w-16 h-16 bg-brand-navy flex items-center justify-center rounded-xl mb-6 text-white text-2xl">
+                        <i class="fas fa-industry"></i>
+                    </div>
+                    <h3 class="font-display font-bold text-xl text-brand-navy mb-3">Printers Club of India Ltd.</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed mb-4">The core operational hub connecting thousands of printers for efficient, high-volume production.</p>
+                </div>
+                <div class="bg-brand-light p-8 rounded-2xl border border-slate-100 card-hover reveal">
+                    <div class="w-16 h-16 bg-brand-gold flex items-center justify-center rounded-xl mb-6 text-white text-2xl">
+                        <i class="fas fa-newspaper"></i>
+                    </div>
+                    <h3 class="font-display font-bold text-xl text-brand-navy mb-3">Printers Club Today</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed mb-4">India’s most widely circulated printing magazine, providing deep market insights and direct reach.</p>
+                </div>
+                <div class="bg-brand-light p-8 rounded-2xl border border-slate-100 card-hover reveal">
+                    <div class="w-16 h-16 bg-brand-navy flex items-center justify-center rounded-xl mb-6 text-white text-2xl">
+                        <i class="fas fa-calendar-alt"></i>
+                    </div>
+                    <h3 class="font-display font-bold text-xl text-brand-navy mb-3">Printers Club Expo</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed mb-4">Leading national exhibitions that connect small-town printers with global technology leaders.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 3: Strength Stats -->
+    <section id="section-3" class="bg-brand-navy py-24 text-white relative overflow-hidden section-item">
+        <div class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] opacity-20"></div>
+        <div class="max-w-7xl mx-auto px-6 relative z-10">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center reveal">
+                <div>
+                    <p class="text-brand-gold text-5xl font-display font-extrabold mb-2">42K+</p>
+                    <p class="text-slate-400 font-bold uppercase tracking-widest text-xs">Direct Printers</p>
+                </div>
+                <div>
+                    <p class="text-brand-gold text-5xl font-display font-extrabold mb-2">100K+</p>
+                    <p class="text-slate-400 font-bold uppercase tracking-widest text-xs">Indirect Reach</p>
+                </div>
+                <div>
+                    <p class="text-brand-gold text-5xl font-display font-extrabold mb-2">27</p>
+                    <p class="text-slate-400 font-bold uppercase tracking-widest text-xs">Regional Branches</p>
+                </div>
+                <div>
+                    <p class="text-brand-gold text-5xl font-display font-extrabold mb-2">150+</p>
+                    <p class="text-slate-400 font-bold uppercase tracking-widest text-xs">Distributors</p>
+                </div>
+            </div>
+            
+            <div class="mt-20 p-8 bg-white/5 backdrop-blur-md rounded-2xl border border-white/10 flex flex-col md:flex-row items-center gap-10 reveal">
+                <div class="md:w-1/2">
+                    <h3 class="text-3xl font-display font-bold mb-4">Unrivaled Market Penetration</h3>
+                    <p class="text-slate-300 leading-relaxed">Serving all major cities of North, Central & East India. We don't just sell equipment; we own the network that uses it.</p>
+                </div>
+                <div class="md:w-1/2 grid grid-cols-2 gap-4">
+                    <div class="bg-brand-navy p-4 rounded-lg border border-brand-gold/30">
+                        <i class="fas fa-check text-brand-gold mb-2"></i>
+                        <p class="text-xs font-bold uppercase">Largest Magazine</p>
+                        <p class="text-slate-400 text-xs">26,000+ Subscribers</p>
+                    </div>
+                    <div class="bg-brand-navy p-4 rounded-lg border border-brand-gold/30">
+                        <i class="fas fa-check text-brand-gold mb-2"></i>
+                        <p class="text-xs font-bold uppercase">Direct Access</p>
+                        <p class="text-slate-400 text-xs">Nationwide Network</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 4: Operations & Commitment -->
+    <section id="section-4" class="section-padding bg-slate-50 section-item">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid md:grid-cols-2 gap-20 items-center">
+                <div class="reveal">
+                    <h2 class="text-brand-navy font-display font-extrabold text-4xl mb-6 italic">Scaling Efficiency</h2>
+                    <p class="text-slate-600 text-lg mb-8">We club (gang) similar print orders, reducing production costs and enabling Printers to achieve better pricing and higher efficiency.</p>
+                    
+                    <div class="space-y-6">
+                        <div class="flex items-start gap-4 p-6 bg-white rounded-xl shadow-sm">
+                            <div class="text-brand-gold text-3xl font-bold">7M</div>
+                            <div>
+                                <h4 class="font-bold text-brand-navy uppercase text-sm tracking-wider">Visiting Cards Daily</h4>
+                                <p class="text-slate-500 text-sm">Processing massive volumes with pinpoint accuracy.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4 p-6 bg-white rounded-xl shadow-sm">
+                            <div class="text-brand-navy text-3xl font-bold">10K</div>
+                            <div>
+                                <h4 class="font-bold text-brand-navy uppercase text-sm tracking-wider">Orders Daily</h4>
+                                <p class="text-slate-500 text-sm">Robust transactional engine handling 8k-10k orders.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-brand-navy p-12 rounded-[2rem] text-white reveal relative overflow-hidden">
+                    <i class="fas fa-award absolute -top-10 -right-10 text-[15rem] text-white/5 rotate-12"></i>
+                    <h3 class="text-3xl font-display font-bold mb-8 relative z-10">Our Commitment to Quality</h3>
+                    <div class="space-y-8 relative z-10">
+                        <div class="flex gap-4">
+                            <div class="w-12 h-12 shrink-0 bg-brand-gold rounded-full flex items-center justify-center">
+                                <i class="fas fa-undo"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-xl mb-1 italic">No-question-asked reprint</h4>
+                                <p class="text-slate-300 text-sm">Building trust through extreme accountability.</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-4">
+                            <div class="w-12 h-12 shrink-0 bg-brand-gold rounded-full flex items-center justify-center">
+                                <i class="fas fa-hand-holding-usd"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-xl mb-1 italic">100% Refund if delayed</h4>
+                                <p class="text-slate-300 text-sm">Service reliability that sets the industry standard.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 5: Expos Section -->
+    <section id="section-5" class="section-padding bg-white section-item">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16 reveal">
+                <h2 class="text-brand-navy font-display font-extrabold text-4xl mb-4">Expo Excellence</h2>
+                <p class="text-slate-500 italic max-w-2xl mx-auto">Unrivaled crowd-pulling power and industry trust.</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-12">
+                <div class="group reveal">
+                    <div class="overflow-hidden rounded-2xl mb-6">
+                        <img src="https://expo.printersclub.in/expo_img/event_gallery_and_cover_images/event_gallery_images/national-printing-expo-amdavad-2024-c0cfe.jpg" class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500" alt="Ahmedabad Expo">
+                    </div>
+                    <h4 class="text-brand-gold font-bold uppercase text-xs mb-2">Case Study: Ahmedabad</h4>
+                    <h3 class="text-2xl font-display font-bold text-brand-navy mb-4">Unprecedented Turnout</h3>
+                    <p class="text-slate-600">Visitor turnout was so high that entry had to be allowed without registration, despite having 10 fast-processing registration counters with advanced software.</p>
+                </div>
+                
+                <div class="group reveal">
+                    <div class="overflow-hidden rounded-2xl mb-6">
+                        <img src="https://expo.printersclub.in/expo_img/event_gallery_and_cover_images/event_gallery_images/national-printing-expo-jaipur-2024-395e3.jpg" class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500" alt="Jaipur Expo">
+                    </div>
+                    <h4 class="text-brand-gold font-bold uppercase text-xs mb-2">Case Study: Jaipur 2026</h4>
+                    <h3 class="text-2xl font-display font-bold text-brand-navy mb-4">200+ Exhibitors vs Competitor's 70</h3>
+                    <p class="text-slate-600">Even when an established industry player organized a competing show, our March Expo attracted 3x the exhibitors, demonstrating massive market influence.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 6: The Team / Family -->
+    <section id="section-6" class="section-padding bg-slate-50 relative overflow-hidden section-item">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid md:grid-cols-2 gap-16 items-center">
+                <div class="reveal">
+                    <span class="text-brand-gold font-bold uppercase tracking-widest text-xs">Our People</span>
+                    <h2 class="text-brand-navy font-display font-extrabold text-4xl mt-2 mb-6">More Than An Organization,<br><span class="text-brand-gold underline italic">We are a Family</span></h2>
+                    <p class="text-slate-600 text-lg mb-8 italic">"Our people work with ownership, passion, and heart. Commitment and dedication are the cornerstones of our success."</p>
+                    
+                    <ul class="space-y-4">
+                        <li class="flex items-center gap-3 font-semibold text-brand-navy">
+                            <i class="fas fa-users-viewfinder text-brand-gold"></i> 350+ Dedicated team members
+                        </li>
+                        <li class="flex items-center gap-3 font-semibold text-brand-navy">
+                            <i class="fas fa-heart text-brand-gold"></i> Loyalty: Employees with us since day one
+                        </li>
+                        <li class="flex items-center gap-3 font-semibold text-brand-navy">
+                            <i class="fas fa-handshake text-brand-gold"></i> Strong culture of ownership
+                        </li>
+                    </ul>
+                </div>
+                <div class="grid grid-cols-2 gap-4 reveal">
+                    <div class="space-y-4 pt-10">
+                        <img src="https://expo.printersclub.in/expo_img/event_gallery_and_cover_images/event_gallery_images/national-printing-expo-amdavad-2024-d3ae2.jpg" class="rounded-xl shadow-lg h-60 w-full object-cover" alt="Team 1">
+                        <img src="https://expo.printersclub.in/expo_img/event_gallery_and_cover_images/event_gallery_images/national-printing-expo-amdavad-2024-04bdf.jpg" class="rounded-xl shadow-lg h-40 w-full object-cover" alt="Team 2">
+                    </div>
+                    <div class="space-y-4">
+                        <img src="https://expo.printersclub.in/expo_img/event_gallery_and_cover_images/event_gallery_images/national-printing-expo-amdavad-2024-fccaa.jpg" class="rounded-xl shadow-lg h-40 w-full object-cover" alt="Team 3">
+                        <img src="https://expo.printersclub.in/expo_img/event_gallery_and_cover_images/event_gallery_images/national-printing-expo-amdavad-2024-e73b5.jpg" class="rounded-xl shadow-lg h-60 w-full object-cover" alt="Team 4">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 7: Leadership -->
+    <section id="section-7" class="section-padding bg-white section-item">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16 reveal">
+                <h2 class="text-brand-navy font-display font-extrabold text-4xl">Strong Leadership</h2>
+            </div>
+            
+            <div class="grid md:grid-cols-4 gap-8">
+                <div class="text-center reveal">
+                    <div class="w-32 h-32 bg-slate-200 rounded-full mx-auto mb-6 flex items-center justify-center text-slate-400 text-4xl border-4 border-brand-gold/20">
+                        <img src="https://www.printersclub.in/images/team/adityaji.jpg" class="rounded-full aspect-square object-cover object-top" alt="Mr. Aditya Singh">
+                    </div>
+                    <h4 class="font-display font-bold text-brand-navy">Mr. Aditya Singh</h4>
+                    <p class="text-brand-gold font-bold text-xs uppercase mb-2 italic">Managing Director</p>
+                    <p class="text-slate-500 text-xs px-4">Visionary leader building a global printing ecosystem.</p>
+                </div>
+                <div class="text-center reveal">
+                    <div class="w-32 h-32 bg-slate-200 rounded-full mx-auto mb-6 flex items-center justify-center text-slate-400 text-4xl border-4 border-brand-navy/20">
+                        <img src="https://www.printersclub.in/images/team/nitinji.jpg" class="rounded-full aspect-square object-cover object-top" alt="Mr. Nitin Verma">
+                    </div>
+                    <h4 class="font-display font-bold text-brand-navy">Mr. Nitin Verma</h4>
+                    <p class="text-brand-navy font-bold text-xs uppercase mb-2 italic">Director (IT)</p>
+                    <p class="text-slate-500 text-xs px-4">20+ years IT expertise leading tech development.</p>
+                </div>
+                <div class="text-center reveal">
+                    <div class="w-32 h-32 bg-slate-200 rounded-full mx-auto mb-6 flex items-center justify-center text-slate-400 text-4xl border-4 border-brand-navy/20">
+                        <img src="https://printersclub.in/images/team/lalitji.jpg" class="rounded-full aspect-square object-cover object-top" alt="CA Lalit Kumawat">
+                    </div>
+                    <h4 class="font-display font-bold text-brand-navy">CA Lalit Kumawat</h4>
+                    <p class="text-brand-navy font-bold text-xs uppercase mb-2 italic">Dir (Finance & HR)</p>
+                    <p class="text-slate-500 text-xs px-4">Corporate accounting and HR strategy expert.</p>
+                </div>
+                <div class="text-center reveal">
+                    <div class="w-32 h-32 bg-slate-200 rounded-full mx-auto mb-6 flex items-center justify-center text-slate-400 text-4xl border-4 border-brand-navy/20">
+                        <img src="https://d2gjqh9j26unp0.cloudfront.net/profilepic/09a5d15d36e8e1e45f11cf2b7b38ddaf" class="rounded-full aspect-square object-cover object-top" alt="Mr. R.D. Bhatnagar">
+                    </div>
+                    <h4 class="font-display font-bold text-brand-navy">Mr. R.D. Bhatnagar</h4>
+                    <p class="text-brand-navy font-bold text-xs uppercase mb-2 italic">Professional Director</p>
+                    <p class="text-slate-500 text-xs px-4">Former CTO, Dainik Bhaskar; Tech veteran.</p>
+                </div>
+            </div>
+            
+            <div class="mt-24 pt-12 border-t border-slate-100 text-center reveal">
+                <p class="text-brand-navy font-display font-extrabold text-2xl uppercase tracking-widest italic">Printers Club of <span class="text-brand-gold">India Limited</span></p>
+                <p class="text-slate-400 text-xs mt-2">&copy; 2026 Printers Club of India Ltd. All Rights Reserved.</p>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Reveal animation on scroll
+        function reveal() {
+            var reveals = document.querySelectorAll(".reveal");
+            for (var i = 0; i < reveals.length; i++) {
+                var windowHeight = window.innerHeight;
+                var elementTop = reveals[i].getBoundingClientRect().top;
+                var elementVisible = 150;
+                if (elementTop < windowHeight - elementVisible) {
+                    reveals[i].classList.add("active");
+                }
+            }
+        }
+        window.addEventListener("scroll", reveal);
+        window.onload = reveal;
+
+        // One-click navigation logic
+        const sections = Array.from(document.querySelectorAll('.section-item'));
+        
+        function navigate(direction) {
+            const currentScroll = window.pageYOffset + 100; // Add offset for detection
+            let targetIndex = 0;
+
+            // Find current section index based on scroll position
+            sections.forEach((section, index) => {
+                if (currentScroll >= section.offsetTop) {
+                    targetIndex = index;
+                }
+            });
+
+            if (direction === 'next') {
+                targetIndex = Math.min(targetIndex + 1, sections.length - 1);
+            } else if (direction === 'prev') {
+                targetIndex = Math.max(targetIndex - 1, 0);
+            }
+
+            // Smooth scroll to target
+            const targetElement = sections[targetIndex];
+            window.scrollTo({
+                top: targetElement.offsetTop,
+                behavior: 'smooth'
+            });
+        }
+
+        // Support for keyboard navigation (Arrow keys)
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowDown') navigate('next');
+            if (e.key === 'ArrowUp') navigate('prev');
+        });
+    </script>
+
+</body>
+</html>
